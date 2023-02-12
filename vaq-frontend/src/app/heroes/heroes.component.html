@@ -1,0 +1,18 @@
+<H2>Minha Familia</H2>
+<ul class="heroes">
+  <li *ngFor="let heroLocal of heroes"
+
+  [class.selected]="heroLocal ===selectedHero" (click)="onClick(heroLocal)" >
+
+  <span>{{ heroLocal.id }}</span><Br>
+    <span>{{ heroLocal.name }}</span><br>
+    <span>{{ heroLocal.apelido }}</span><br>
+    <span>{{ heroLocal.idade }}</span><br>
+    <br>
+  </li>
+</ul>
+
+
+<app-hero-detail [hero]="selectedHero" ></app-hero-detail>
+
+
